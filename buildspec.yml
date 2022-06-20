@@ -8,7 +8,7 @@ phases:
       - apt-get install -y maven
   build:
     commands:
-      - echo Buildong the seamfix-geostore project on 'date'
+      - echo Building the seamfix-geostore project on 'date'
       - mvn clean install
   post_build:
     commands:
@@ -17,7 +17,9 @@ phases:
 artifacts:
   files:
     - $CODEBUILD_SRC_DIR/**/*.war
-    - s3://seamfix-geostore/appspec.yml
-    - s3://seamfix-geostore/scripts/start-process.sh
+    - $CODEBUILD_SRC_DIR/**/doc/sql/001_setup_db.sql
+    - $CODEBUILD_SRC_DIR/**/doc/sql/002_create_schema_postgres.sql
+    - $CODEBUILD_SRC_DIR/**/doc/sql/002_create_schema_postgres.sql
+    - arn:aws:s3:::seamfix-geostore/appspec.yml
+    - arn:aws:s3:::seamfix-geostore/scripts/*
   discard-paths: yes
-
