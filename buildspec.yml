@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing maven 
+      - apt-get update -y
+      - apt-get install -y maven
+  build:
+    commands:
+      - echo Buildong the seamfix-geostore project on 'date'
+      - mvn clean install
+  post_build:
+    commands:
+     - echo Buld completed for seamfix-geostore project on 'date'
+     - mvn package
+artifacts:
+  files:
+    - $CODEBUILD_SRC_DIR/**/*.war
+    - s3://seamfix-geostore/appspec.yml
+    - s3://seamfix-geostore/scripts/start-process.sh
+  discard-paths: yes
+
