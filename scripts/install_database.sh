@@ -1,6 +1,6 @@
 #!/bin/bash
 
-unzip *
+unzip *.zip
 
 ./usr/share/tomcat/run4MS.sh
 
