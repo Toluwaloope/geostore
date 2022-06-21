@@ -1,5 +1,7 @@
 #!/bin/bash
 
+unzip *
+
 ./usr/share/tomcat/run4MS.sh
 
 sudo apt update
