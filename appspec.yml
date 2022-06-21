@@ -4,23 +4,27 @@ files:
   - source: /geostore.war
     destination: /tmp
 hooks:
+  PreInstall:
+    - location: install_apache_tomcat.sh
+      timeout: 300
+      runas: root
   BeforeInstall:
-    - location: scripts/install_apache_tomcat.sh
+    - location: install_database.sh
+      timeout: 300
+      runas: root
+  DuringInstall:
+    - location: run4MS.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/install_database.sh
-      timeout: 300
-      runas: root
-  AfterInstall:
-    - location: scripts/create_database.sh
+    - location: create_database.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server.sh
+    - location: stop_server.sh
       timeout: 180
       runas: root
   ApplicationStart:
-    - location: scripts/start-server.sh
+    - location: start-server.sh
       timeout: 180
       runas: root
