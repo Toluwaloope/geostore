@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /geostore.war
+  - source: /
     destination: /tmp
 hooks:
   PreInstall:
