@@ -17,9 +17,8 @@ phases:
 artifacts:
   files:
     - $CODEBUILD_SRC_DIR/**/*.war
-    - $CODEBUILD_SRC_DIR/**/doc/sql/001_setup_db.sql
-    - $CODEBUILD_SRC_DIR/**/doc/sql/002_create_schema_postgres.sql
-    - $CODEBUILD_SRC_DIR/**/doc/sql/002_create_schema_postgres.sql
-    - arn:aws:s3:::seamfix-geostore/appspec.yml
-    - arn:aws:s3:::seamfix-geostore/scripts/*
+    - $CODEBUILD_SRC_DIR/clean4MS.sh
+    - $CODEBUILD_SRC_DIR/run4MS.sh
+    - $CODEBUILD_SRC_DIR/appspec.yml
+    - $CODEBUILD_SRC_DIR/scripts/*
   discard-paths: yes
