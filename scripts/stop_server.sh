@@ -1,3 +1,3 @@
-./opt/tomcat/bin/shutdown.sh
+#!/bin/bash
 
-rm -rf /opt/tomcat/webapps/*
+sudo systemctl stop tomcat.service
