@@ -4,15 +4,11 @@ files:
   - source: /
     destination: /tmp
 hooks:
-  PreInstall:
-    - location: install_apache_tomcat.sh
-      timeout: 300
-      runas: root
-  BeforeInstall:
+   BeforeInstall:
     - location: install_database.sh
       timeout: 300
       runas: root
-  DuringInstall:
+  Install:
     - location: run4MS.sh
       timeout: 300
       runas: root
