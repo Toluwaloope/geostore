@@ -8,7 +8,7 @@ hooks:
     - location: stop_server.sh
       timeout: 180
       runas: ec2_user
-   BeforeInstall:
+  BeforeInstall:
     - location: install_database.sh
       timeout: 300
       runas: ec2_user
