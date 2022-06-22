@@ -2,23 +2,19 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - echo Installing maven 
-      - apt-get update -y
-      - apt-get install -y maven
+    runtime-version:
+      java: corretto11
   build:
     commands:
       - echo Building the seamfix-geostore project on 'date'
-      - mvn clean install
+      - ./gradlew bootJar
   post_build:
     commands:
      - echo Buld completed for seamfix-geostore project on 'date'
-     - mvn package
 artifacts:
   files:
-     - $CODEBUILD_DIR/**/*.war   
+     - build/libs/*.jar   
      - run4MS.sh
      - appspec.yml
      - scripts/*
-     - src/*
   discard-paths: yes
