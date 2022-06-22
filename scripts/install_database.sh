@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mv * /usr/share/tomcat/webapps/
+cp * /usr/share/tomcat/webapps/
 
 #sudo yum update -y
 
