@@ -1,8 +1,6 @@
 #!/bin/bash
 
-unzip *.zip -d /usr/share/tomcat/webapps/
-
-./usr/share/tomcat/webapps/run4MS.sh
+mv * /usr/share/tomcat/webapps/
 
 #sudo yum update -y
 
