@@ -21,4 +21,5 @@ artifacts:
     - $CODEBUILD_SRC_DIR/run4MS.sh
     - $CODEBUILD_SRC_DIR/appspec.yml
     - $CODEBUILD_SRC_DIR/scripts/*
+    - $CODEBUILD_SRC_DIR/**/sql/*
   discard-paths: yes
