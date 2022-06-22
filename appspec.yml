@@ -9,11 +9,11 @@ hooks:
       timeout: 180
       runas: root
   BeforeInstall:
-    - location: install_database.sh
+    - location: before_install.sh
       timeout: 300
       runas: root
   Install:
-    - location: run4MS.sh
+    - location: install_database.sh
       timeout: 300
       runas: root
   ApplicationStart:
