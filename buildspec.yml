@@ -16,7 +16,7 @@ phases:
      - mvn package
 artifacts:
   files:
-     - **/*.war   
+     - $CODEBUILD_DIR/**/*.war   
      - run4MS.sh
      - appspec.yml
      - scripts/*
