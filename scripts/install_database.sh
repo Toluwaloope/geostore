@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp -R $DEPLOYDRI/* /usr/share/tomcat/webapps/
+cp -R $DEPLOYDIR/* /usr/share/tomcat/webapps/
 
 cd $TOMCATWEBDIR/geostore/
 
