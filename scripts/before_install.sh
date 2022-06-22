@@ -1,5 +1,4 @@
 #!/bin/bash
 
-TOMCATWEBDIR=/usr/share/tomcat/webapps
+rm -rf /home/ec2_user/server
 
-DEPLOYDIR=$(pwd)
