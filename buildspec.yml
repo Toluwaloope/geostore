@@ -24,5 +24,4 @@ artifacts:
     - $CODEBUILD_SRC_DIR/appspec.yml
     - $CODEBUILD_SRC_DIR/scripts/*
     - $CODEBUILD_SRC_DIR/**/sql/*
-   folders:
   discard-paths: yes
