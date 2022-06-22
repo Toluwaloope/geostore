@@ -2,7 +2,14 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /usr/share/tomcat/webapps
+    destination: /home/ec2-user/server
+    
+permissions:  
+  - object: /
+    pattern: "**"
+    owner: ec2_user
+    group: ec2_user
+
 hooks:
   ApplicationStop:
     - location: stop_server.sh
@@ -13,7 +20,11 @@ hooks:
       timeout: 300
       runas: root
   Install:
-    - location: install_database.sh
+    - location: install.sh
+      timeout: 300
+      runas: root
+  After Install:
+    - location: fix_executables.sh
       timeout: 300
       runas: root
   ApplicationStart:
