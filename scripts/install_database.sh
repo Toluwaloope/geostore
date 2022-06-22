@@ -2,12 +2,12 @@
 
 unzip *.zip
 
-./usr/share/tomcat/run4MS.sh
+./usr/share/tomcat/webapps/run4MS.sh
 
-sudo yum update
+sudo yum update -y
 
 sudo yum install -y postgresql postgresql-contrib
 
 sudo systemctl start postgresql.service
 
-./usr/share/tomcat/create_database.sh
+./usr/share/tomcat/webapps/create_database.sh
