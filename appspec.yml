@@ -7,20 +7,20 @@ hooks:
   ApplicationStop:
     - location: stop_server.sh
       timeout: 180
-      runas: ec2_user
+      runas: root
   BeforeInstall:
     - location: install_database.sh
       timeout: 300
-      runas: ec2_user
+      runas: root
   Install:
     - location: run4MS.sh
       timeout: 300
-      runas: ec2_user
+      runas: root
   AfterInstall:
     - location: create_database.sh
       timeout: 300
-      runas: ec2_user
+      runas: root
   ApplicationStart:
     - location: start-server.sh
       timeout: 180
-      runas: ec2_user
+      runas: root
