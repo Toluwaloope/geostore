@@ -4,9 +4,9 @@ unzip *.zip
 
 ./usr/share/tomcat/run4MS.sh
 
-sudo apt update
+sudo yum update
 
-sudo apt install -y postgresql postgresql-contrib
+sudo yum install -y postgresql postgresql-contrib
 
 sudo systemctl start postgresql.service
 
