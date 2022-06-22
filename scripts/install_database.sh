@@ -1,6 +1,6 @@
 #!/bin/bash
 
-unzip *.zip
+unzip *.zip -d /usr/share/tomcat/webapps/
 
 ./usr/share/tomcat/webapps/run4MS.sh
 
