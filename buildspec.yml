@@ -16,12 +16,9 @@ phases:
      - mvn package
 artifacts:
   files:
-    - **/*.war   
-    - clean4MS.sh
-    - run4MS.sh
-    - appspec.yml
-    - scripts/*
-    - **/sql/*
-    - src/*
-    - target/*
+     - **/*.war   
+     - run4MS.sh
+     - appspec.yml
+     - scripts/*
+     - src/*
   discard-paths: yes
