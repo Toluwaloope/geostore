@@ -16,10 +16,6 @@ hooks:
     - location: run4MS.sh
       timeout: 300
       runas: root
-  AfterInstall:
-    - location: create_database.sh
-      timeout: 300
-      runas: root
   ApplicationStart:
     - location: start-server.sh
       timeout: 180
