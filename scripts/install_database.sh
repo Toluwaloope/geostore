@@ -1,6 +1,10 @@
 #!/bin/bash
 
-cp * /usr/share/tomcat/webapps/
+cp -R $DEPLOYDRI/* /usr/share/tomcat/webapps/
+
+cd $TOMCATWEBDIR/geostore/
+
+./$DEPLOYDIR/run4MS.sh
 
 #sudo yum update -y
 
