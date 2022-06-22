@@ -16,11 +16,13 @@ phases:
      - mvn package
 artifacts:
   files:
-    - $CODEBUILD_SRC_DIR/**/*.war
-    - $CODEBUILD_SRC_DIR/**/target/*
+    - $CODEBUILD_SRC_DIR/**/*.war   
     - $CODEBUILD_SRC_DIR/clean4MS.sh
     - $CODEBUILD_SRC_DIR/run4MS.sh
     - $CODEBUILD_SRC_DIR/appspec.yml
     - $CODEBUILD_SRC_DIR/scripts/*
     - $CODEBUILD_SRC_DIR/**/sql/*
+  folders:
+    - $CODEBUILD_SRC_DIR/**/src
+    - $CODEBUILD_SRC_DIR/**/target
   discard-paths: yes
