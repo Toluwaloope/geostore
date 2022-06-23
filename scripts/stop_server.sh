@@ -2,4 +2,4 @@
 
 sudo systemctl stop tomcat.service
 
-sudo pkill -f 'java -jar'
+#sudo pkill -f 'java -jar'
