@@ -15,7 +15,8 @@ phases:
      - echo Buld completed for seamfix-geostore project on 'date'
 artifacts:
   files:
-     - $CODEBUILD_SRC_DIR/src/**/target/*
+     - $CODEBUILD_SRC_DIR/src/web/app/target/*
+     - $CODEBUILD_SRC_DIR/src/web/app/pom.xml
      - run4MS.sh
      - appspec.yml
      - scripts/*
