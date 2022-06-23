@@ -8,14 +8,14 @@ phases:
   build:
     commands:
       - echo Building the seamfix-geostore project on 'date'
-      - cd $CODEBUILD_SRC_DIR/src/web/app
+      - cd $CODEBUILD_SRC_DIR/src/web/
       - mvn clean install
   post_build:
     commands:
      - echo Buld completed for seamfix-geostore project on 'date'
 artifacts:
   files:
-     - $CODEBUILD_SRC_DIR/src/**/target/*
+     - $CODEBUILD_SRC_DIR/src/**/app/*
      - run4MS.sh
      - appspec.yml
      - scripts/*
