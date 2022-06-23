@@ -14,11 +14,11 @@ hooks:
       timeout: 300
       runas: root
   Install:
-    - location: install.sh
+    - location: fix_executables.sh
       timeout: 300
       runas: root
   After Install:
-    - location: fix_executables.sh
+    - location: install.sh
       timeout: 300
       runas: root
   ApplicationStart:
