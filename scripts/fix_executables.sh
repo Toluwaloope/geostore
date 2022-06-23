@@ -1,4 +1,3 @@
 #!/bin/bash
-
-sudo chmod +x /home/ec2_user/*.sh
-sudo chmod +x /home/ec2_user/*.jar
+sudo chmod 755 /home/ec2_user/*.sh
+sudo chmod 755 /home/ec2_user/*.jar
