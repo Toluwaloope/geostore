@@ -13,6 +13,7 @@ phases:
   post_build:
     commands:
      - echo Buld completed for seamfix-geostore project on 'date'
+     - mvn package
 artifacts:
   files:
      - $CODEBUILD_SRC_DIR/src/web/app/target/*
