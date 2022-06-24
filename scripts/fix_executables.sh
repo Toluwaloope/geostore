@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo chmod 755 /home/ec2_user/*.sh
-sudo chmod 755 /home/ec2_user/*.jar
+sudo chmod 755 /usr/share/tomcat/webapps/*.sh
+sudo chmod 755 /usr/share/tomcat/webapps/*.jar
